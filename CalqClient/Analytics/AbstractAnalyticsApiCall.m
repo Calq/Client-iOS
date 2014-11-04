@@ -90,7 +90,7 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
-    for (id k in dict)
+    for (id k in [dict allKeys])
     {
         if ([dict[k] isKindOfClass: [NSDate class]])
         {

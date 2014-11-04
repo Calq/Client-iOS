@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A11C9A6E1A0961550066A6C8 /* ApiDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A11C9A6D1A0961550066A6C8 /* ApiDispatcher.m */; };
+		A11C9A701A09617B0066A6C8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A11C9A6F1A09617B0066A6C8 /* libsqlite3.dylib */; };
 		A1672B061949F96800206EF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1672B051949F96800206EF7 /* Foundation.framework */; };
 		A1672B0B1949F96800206EF7 /* CalqClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1672B0A1949F96800206EF7 /* CalqClient.h */; };
 		A1672B0D1949F96800206EF7 /* CalqClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A1672B0C1949F96800206EF7 /* CalqClient.m */; };
@@ -54,6 +56,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A11C9A6C1A0961550066A6C8 /* ApiDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiDispatcher.h; sourceTree = "<group>"; };
+		A11C9A6D1A0961550066A6C8 /* ApiDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiDispatcher.m; sourceTree = "<group>"; };
+		A11C9A6F1A09617B0066A6C8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A1672B021949F96800206EF7 /* libCalqClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCalqClient.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1672B051949F96800206EF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A1672B091949F96800206EF7 /* CalqClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CalqClient-Prefix.pch"; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A11C9A701A09617B0066A6C8 /* libsqlite3.dylib in Frameworks */,
 				A1672B141949F96800206EF7 /* XCTest.framework in Frameworks */,
 				A1672B1A1949F96800206EF7 /* libCalqClient.a in Frameworks */,
 				A1672B171949F96800206EF7 /* UIKit.framework in Frameworks */,
@@ -133,6 +139,7 @@
 		A1672B041949F96800206EF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A11C9A6F1A09617B0066A6C8 /* libsqlite3.dylib */,
 				A1672B051949F96800206EF7 /* Foundation.framework */,
 				A1672B131949F96800206EF7 /* XCTest.framework */,
 				A1672B161949F96800206EF7 /* UIKit.framework */,
@@ -187,6 +194,8 @@
 				A195BDE9194F833F00B66345 /* ActionApiCall.m */,
 				A19509301950E42B00539DC8 /* ApiDataStore.h */,
 				A19509311950E42B00539DC8 /* ApiDataStore.m */,
+				A11C9A6C1A0961550066A6C8 /* ApiDispatcher.h */,
+				A11C9A6D1A0961550066A6C8 /* ApiDispatcher.m */,
 				A195BDE8194F833F00B66345 /* ApiHandler.h */,
 				A195BDE7194F833F00B66345 /* ApiHandler.m */,
 				A195BDF6194FA1D600B66345 /* ProfileApiCall.h */,
@@ -300,6 +309,7 @@
 				A195BDEC194F833F00B66345 /* ActionApiCall.m in Sources */,
 				A195BDF8194FA1D600B66345 /* ProfileApiCall.m in Sources */,
 				A195BDF5194F9FFB00B66345 /* ReservedActionProperties.m in Sources */,
+				A11C9A6E1A0961550066A6C8 /* ApiDispatcher.m in Sources */,
 				A195BDE6194F82FB00B66345 /* AbstractAnalyticsApiCall.m in Sources */,
 				A1672B0D1949F96800206EF7 /* CalqClient.m in Sources */,
 				A195BDEB194F833F00B66345 /* ApiHandler.m in Sources */,
