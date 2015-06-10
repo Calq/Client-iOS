@@ -10,9 +10,9 @@ The Calq iOS client can be quickly imported using using [CocoaPods](http://cocoa
 
 1. If you have not already done so, install CocoaPods using `gem install cocoapods` followed by `pod setup` to create a local mirror.
 2. Create a file in your Xcode project called `Podfile` with the following line included:
-```
-pod 'CalqClient-iOS'
-```
+   ```
+   pod 'CalqClient-iOS'
+   ```
 3. Run `pod install` from your Xcode project directory to import the Calq library.
 
 Installation (Xcode - Manual)
