@@ -3,18 +3,31 @@ Calq iOS Client
 
 The full quick start and reference docs can be found at: https://www.calq.io/docs/client/ios
 
-Installation (Xcode)
---------------------
+Installation (via CocoaPods)
+-----------------------
 
-Grab the [latest release from GitHub](https://github.com/Calq/Client-iOS/releases) and extract it.
+The Calq iOS client can be quickly imported using using [CocoaPods](http://cocoapods.org/).
 
-1. Drag the CalqClient folder into your project.
-2. Make sure Copy items into destination group's folder is selected, as well as Create groups for any added folders.
+1. If you have not already done so, install CocoaPods using `gem install cocoapods` followed by `pod setup` to create a local mirror.
+2. Create a file in your Xcode project called `Podfile` with the following line included:
+```
+pod 'CalqClient-iOS'
+```
+3. Run `pod install` from your Xcode project directory to import the Calq library.
+
+Installation (Xcode - Manual)
+-----------------------------
+
+Alternatively you can add the Calq iOS client to Xcode manually with the following steps:
+ 
+1. Grab the [latest release from GitHub](https://github.com/Calq/Client-iOS/releases) and extract it.
+2. Drag the CalqClient folder into your project.
+3. Make sure Copy items into destination group's folder is selected, as well as Create groups for any added folders.
 
 You will also need to link agaisnt SQLite if you haven't already (Calq uses this to store API calls when a user has limited connectivity).
 
-3. Select your project in Xcode's Navigator to edit it's properties and choose the Build Phases tab.
-4. Under "Link Binary With Libraries" press the + button and search for a suitable SQLite library (such as libsqlite3.dylib).
+4. Select your project in Xcode's Navigator to edit it's properties and choose the Build Phases tab.
+5. Under "Link Binary With Libraries" press the + button and search for a suitable SQLite library (such as libsqlite3.dylib).
 
 For full installation steps check out the [install section of the iOS Quick Start](https://www.calq.io/docs/client/ios).
 
