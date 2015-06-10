@@ -28,6 +28,7 @@
     NSString * _actor;
     NSString * _action;
     NSString * _writeKey;
+    NSDate * _date;
     NSMutableDictionary * _properties;
 }
 
@@ -40,10 +41,19 @@
     _action = @"Test Action";
     _writeKey = @"dummykey_00000000000000000000000";
     
+    // We want a specific date to test format output against (2015-01-01 18:00:00)
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:2015];
+    [components setMonth:1];
+    [components setDay:1];
+    [components setHour:18];
+    _date = [calendar dateFromComponents:components];
+    
     _properties = [[NSMutableDictionary alloc] init];
     [_properties setObject:@"Test Value" forKey:@"Test Property"];
     
-    _call = [[ActionApiCall alloc] initWithData:_actor action:_action properties:_properties writeKey:_writeKey];
+    _call = [[ActionApiCall alloc] initWithDataAndTimestamp:_actor action:_action properties:_properties writeKey:_writeKey timestamp:_date];
     
     [super setUp];
 }
@@ -85,6 +95,8 @@
     XCTAssertEqualObjects(data[ActionName], _action, @"Payload did not match input for %@", ActionName);
     XCTAssertEqualObjects(data[WriteKey], _writeKey, @"Payload did not match input for %@", WriteKey);
     XCTAssertNotNil(data[UserProperties], @"Payload had missing %@ node", UserProperties);
+    
+    XCTAssertEqualObjects(data[Timestamp], @"2015-01-01T18:00:00.000Z", @"Payload did not match input for %@", Timestamp);
 }
 
 

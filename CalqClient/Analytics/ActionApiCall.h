@@ -28,4 +28,16 @@
  */
 - (instancetype) initWithData:(NSString *)actor action:(NSString *)action properties:(NSDictionary *)properties writeKey:(NSString *)writeKey;
 
+/**
+ * Initialises a new ActionApiCall describing an action. This will be passed to the
+ * /track/ API endpoint.
+ *
+ * @param actor				The actor performing this action.
+ * @param action			The action being performed.
+ * @param properties		Any custom properties related to this action. Can be empty, but not nil.
+ * @param writeKey			The write key to use for this API call.
+ * @param timestamp			The timestamp that marks when this action happend (so calls can be sent later if no signal).
+ */
+- (instancetype) initWithDataAndTimestamp:(NSString *)actor action:(NSString *)action properties:(NSDictionary *)properties writeKey:(NSString *)writeKey timestamp:(NSDate *)timestamp;
+
 @end

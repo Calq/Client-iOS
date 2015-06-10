@@ -88,8 +88,12 @@
 + (NSMutableDictionary *) convertNSDatesToNSStrings:(NSMutableDictionary *)dict
 {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSLocale *enPosix = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+    
+    [dateFormatter setLocale:enPosix];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss'Z'"];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];    
+    
     for (id k in [dict allKeys])
     {
         if ([dict[k] isKindOfClass: [NSDate class]])
